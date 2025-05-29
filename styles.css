@@ -8,3 +8,11 @@ body {
     font-family: "Raleway", sans-serif;
     background-color: rgb(180, 231, 188);
 }
+ @media (max-width: 560px) {
+    body {
+        background-color:rgb(180, 231, 188);
+    }
+    .card {
+        flex: 1 0 calc(100% - 1rem);
+    }
+ }

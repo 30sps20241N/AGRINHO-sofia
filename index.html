@@ -84,6 +84,44 @@
     </div>
 </div>
 
+<div>
+    <h1 style = "font-size: 5.5em"> ⤹ </h1>
+</div>
+<div>
+    <p>
+        A permacultura urbana também é um conceito valorizado pelo nosso projeto, já que aplica-se nas realidades das cidades. Levando em conta os aspectos urbanos, como as alterações climáticas, podemos transformar o ambiente para que esteja de acordo com os preceitos da permacultura. É a filosofia responsável por transmitir dicas para mudanças de hábito, seguindo passos simples em nosso cotidiano, como o reaproveitamento de água; formação de adubos com resíduos orgânicos; redução do uso de plásticos e estimular consumos conscientes entre os núcleos sociais. 
+    </p>
+</div>
+<h1 class = "py-5">DEIXE UM COMENTÁRIO</h1>
+<div>
+<form id="form-comentario">
+            <label for="comentario">COMENTÁRIO:</label><br>
+                    <textarea id="comentario" name="comentario" required></textarea><br>
+                            <button type="submit">Enviar</button>
+                                </form>
+
+                                    <div class="comentario" id="comentarios-postados">
+                                            <p class = "py-2">COMENTÁRIOS:</p>
+                                                    <ul id="lista-comentarios"></ul>
+                                                        </div>
+
+                                                            <script>
+                                                                    const form = document.getElementById('form-comentario');
+                                                                            const lista = document.getElementById('lista-comentarios');
+
+                                                                                    form.addEventListener('submit', function(e) {
+                                                                                                e.preventDefault();
+                                                                                                            const comentario = document.getElementById('comentario').value;
+                                                                                                                        if (comentario.trim() !== '') {
+                                                                                                                                        const li = document.createElement('li');
+                                                                                                                                                        li.textContent = comentario;
+                                                                                                                                                                        lista.appendChild(li);
+                                                                                                                                                                                        form.reset();
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                            });
+                                                                                                                                                                                                                </script>
+
+</div>
  </main>
 
      <footer class = "container py-5">
